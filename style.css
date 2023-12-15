@@ -1,0 +1,35 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.nav{
+    height: 70px;
+    background-color: black;
+}
+.logo img{
+    position: relative;top: -65px;
+    height: 200px;
+    width: 200px;
+}
+.sec1{
+    background-color: #191414;
+    height: 250px;
+    z-index: 100px;
+    color: white;
+    text-align: center;
+}
+.sec1 .welcome{
+    font-size: 3.5rem;
+    color: white;
+    font-weight:bolder;
+    position: relative;top: 45px;
+    -webkit-text-stroke: 1px #A67C3F;
+}
+.sec1 .heading{
+    -webkit-text-stroke: 1px #A67C3F;
+    font-size: 2.5rem;
+    color: white;
+    font-weight: bolder;
+    position: relative;top: 45px;
+    margin: 0px 10px 0px 10px;
+}
