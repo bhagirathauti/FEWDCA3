@@ -1,7 +1,13 @@
 *{
     margin: 0px;
     padding: 0px;
+    width: 100vw;
 }
+/* body */
+body{
+    overflow-x: hidden;
+}
+/* navBar */
 .nav{
     height: 70px;
     background-color: black;
@@ -11,10 +17,10 @@
     height: 200px;
     width: 200px;
 }
+/* section1 */
 .sec1{
     background-color: #191414;
     height: 250px;
-    z-index: 100px;
     color: white;
     text-align: center;
 }
@@ -27,9 +33,90 @@
 }
 .sec1 .heading{
     -webkit-text-stroke: 1px #A67C3F;
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     color: white;
     font-weight: bolder;
     position: relative;top: 45px;
-    margin: 0px 10px 0px 10px;
+    margin: 0px 10px 0px 0px;
+}
+/* section2 */
+.sec2{
+    width: 100vw;
+    background-color: black;
+    color: white;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.sec2 #ftDishImage{
+    border: 3px solid #c0852d;
+    border-radius: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    height: 200px;
+    width: 200px;
+}
+.sec2 #ftDishName{
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    margin-top: 30px;
+}
+#ingredientsDiv{
+    display: flex;
+    justify-content: center;
+    text-align: left;
+}
+#ingredientsDiv ul{
+    list-style-type:none;
+     display: none;
+     width: 100px;
+     font-size: 20px;
+}
+.ftbuttons{
+    display: flex;
+    justify-content: center;
+}
+.ftbuttons .btn{
+    background-color: #A67C3F;
+    height: 30px;
+    width: 100px;
+    border-radius: 10px;
+    border: 2px solid white;
+}
+#ftDishIngredients{
+    margin-right: 10px;
+}
+#ftDishInstructions{
+    margin-left: 10px;
+}
+/* section3 */
+.sec3{
+    height: 300px;
+}
+.sec3 .searchBar{
+    background-color: #191414;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sec3 .searchBar #search{
+    margin-left: 10px;
+    height: 40px;
+    width: 250px;
+    border-radius: 10px;
+    background-color: #e8be80;
+    border: 2px solid white;
+    text-align: center;
+}
+.sec3 .searchBar #searchBtn{
+    border-radius: 10px;
+    background-color: #e8be80;
+    border: 2px solid white;
+    margin-left: 15px;
+    height: 40px;
+    width: 70px;
 }

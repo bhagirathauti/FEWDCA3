@@ -17,11 +17,29 @@
     <section class="sec1">
         <p class="welcome">Welcome!</p><br>
         <p class="heading">Meal.Random is An open, crowd-sourced database of Recipes from around the world.</p>
-    </div>
+    </section>
     <!-- RandomMeal Section -->
-    <section class="sec2"></section>
+    <section class="sec2">
+        <div class="nameImagenbuttons">
+        <div class="randomDishNm">
+            <p id="ftDishName"></p>
+        </div>
+        <div class="randomDishImg">
+            <img src="" id ="ftDishImage">
+        </div>
+        <div class="ftbuttons">
+            <input type="button" class="btn" id="ftDishIngredients" value="Ingredients">
+            <input type="button" class="btn" id="ftDishInstructions" value="Instructions">
+        </div>
+        </div>
+    </section>
     <!-- List of Searched Meal -->
-    <section class="sec3"></section>
+    <section class="sec3">
+        <div class="searchBar">
+            <input type="placeholder" id="search" value = "Search For Meal">
+            <input type="button" id = "searchBtn" value="Search">
+        </div>
+    </section>
 </body>
 <script src="app.js"></script>
 </html>
