@@ -5,11 +5,7 @@ const featuredDishName = document.getElementById("ftDishName")
 const ftIngredientsBtn = document.getElementById("ftDishIngredients")
 const ftNameImageNButtons = document.querySelector(".nameImagenbuttons")
 // adding all the ingredients
-const ingredientsDiv = document.createElement("div")
-ingredientsDiv.setAttribute("id", "ingredientsDiv")
-randomImageDiv.appendChild(ingredientsDiv)
-const ingredients = document.createElement("ul")
-ingredientsDiv.appendChild(ingredients)
+const ingredients = [];
 // fetching featured Random Meal
 async function randomMeal(){
     try{
@@ -18,6 +14,16 @@ async function randomMeal(){
         const data = await response.json();
         featuredDish.src=data.meals[0].strMealThumb;
         featuredDishName.innerText="Todays Random Meal : "+data.meals[0].strMeal;
+        ftinstructions.innerText=data.meals[0].strInstructions;
+        const food=data.meals[0]
+        for(let i=0;i<=20;i++){
+            const ingredient = food[`strIngredient${i}`];
+            const measure = food[`strMeasure${i}`];
+            if (ingredient && measure) {
+                ingredients.push(`${measure} ${ingredient}`);
+            }
+        }
+        ftingredients.innerHTML="Ingredients : "+ingredients;
     }catch(error){
         console.log(error)
     }
@@ -35,3 +41,37 @@ async function searchMeal(){
 }
 searchMeal()
 
+// Instructions Modal
+
+const instructionsModal = document.getElementById("instructions")
+const instructionsBtn = document.getElementById("ftDishInstructions")
+const closeSpan = document.getElementsByClassName("close")[0];
+const ftinstructions = document.getElementById("allInstructions")
+instructionsBtn.onclick=()=>{
+    instructionsModal.style.display="block";
+}
+closeSpan.onclick=()=>{
+    instructionsModal.style.display="none";
+}
+window.onclick = function(event){
+    if(event.target==instructionsModal){
+        instructionsModal.style.display="none";
+    }
+}
+// Ingredients Modal
+
+const ingredientsModal = document.getElementById("ingredients")
+const ingredientsBtn = document.getElementById("ftDishIngredients")
+const backSpan = document.getElementsByClassName("back")[0];
+const ftingredients = document.getElementById("allIngredients")
+ingredientsBtn.onclick=()=>{
+    ingredientsModal.style.display="block";
+}
+backSpan.onclick=()=>{
+    ingredientsModal.style.display="none";
+}
+document.body.onclick = function(event){
+    if(event.target==ingredientsModal){
+        ingredientsModal.style.display="none";
+    }
+}
