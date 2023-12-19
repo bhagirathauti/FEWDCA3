@@ -6,6 +6,7 @@
 /* body */
 body{
     overflow-x: hidden;
+    background-color: #000;
 }
 /* navBar */
 .nav{
@@ -191,5 +192,102 @@ body{
     color: white;
     text-decoration: none;
     cursor: pointer;
+}
+/* Search Results */
+.searchResults{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #000;
+    padding: 30px 0px 0px 40px;
+}
+.searchResults .recipe{
+    background-color: #282626;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    height: 270px;
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #c0852d;
+    border-radius: 10px;
+}
+.searchResults .recipe:hover{
+    border: 3px solid red;
+}
+.searchResults img{
+    border-radius: 15px;
+    height: 180px;
+    width: 180px;
+}
+.searchResults p{
+    margin-top: 15px;
+    font-size: 25px;
+    color: #A67C3F;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: auto;
+    text-align: center;
+}
+
+@media(max-width:600px) {
+    *{
+        padding: 0px;
+        margin: 0px;
+    }
+    body{
+        height: 100vh;
+        width: 100vw;
+        overflow-x: hidden;
+        background-color: #000;
+    }
+    .logo{
+        width: auto;
+    }
+    .nav{
+        width: 100vw;
+    }
+    .searchResults{
+        width: 100vw;
+        padding: 0px;
+    }
+    .sec1 .welcome{
+        font-size: 2.5rem;
+        position: relative;top: 25px;
+    }
+    .sec1 .heading{
+        font-size: 1.5rem;
+        position: relative;top: 30px;
+    }
+    .sec1{
+        height: 200px;
+    }
+    .searchResults{
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #000;
+        padding: 30px 0px 0px 40px;
+    }
+    .searchResults .recipe{
+        height: 150px;
+        width: 150px;
+        border: 3px solid #c0852d;
+        border-radius: 10px;
+    }
+    .searchResults img{
+        border-radius: 15px;
+        height: 120px;
+        width: 120px;
+    }
+    .searchResults p{
+        margin-top: 15px;
+        font-size: 15px;
+        color: #A67C3F;
+        font-weight: bold;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        width: auto;
+        text-align: center;
+    }
 }
 
