@@ -30,16 +30,20 @@ async function randomMeal(){
 }
 randomMeal()
 // Meal Search
+const searchBtn = document.getElementById("searchBtn")
+let searchBar = document.getElementById("search")
+let searchedCategory = searchBar.value
+let searchResultsDiv = document.querySelector(".searchResults")
+
 async function searchMeal(){
     try{
-        const response1 = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata`)
+        const response1 = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${searchedCategory}`)
         console.log(response1)
         const data1 = await response1.json();
     }catch(error){
         console.log(error)
     }
 }
-searchMeal()
 
 // Instructions Modal
 
@@ -74,39 +78,4 @@ document.body.onclick = function(event){
     if(event.target==ingredientsModal){
         ingredientsModal.style.display="none";
     }
-}
-
-//Search Results
-const searchResults = document.querySelector(".searchResults")
-const searchBar = document.getElementById("search")
-const searchItem = searchBar.value
-const searchBtn = document.getElementById("searchBtn")
-function getResults() {
-    
-    searchResults.innerHTML = ""
-    searchTitle.style.visibility = "visible"
-    
-    fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${searchItem}`)
-    .then((res) => res.json())
-    .then((data) => {
-        console.log(data)
-        appendSearchResults(data)
-    })
-    .catch((err) => console.log(err))
-
-    const categoryName = document.getElementById("category-name")
-    categoryName.innerText = searchBar.value
-}
-
-
-function appendSearchResults(data) {
-    if(data.meals !== null){  
-        const meals = data.meals
-        meals.forEach(food => {
-            searchResults.innerHTML  += `<div class="recipe">
-            <img class="recipe-thumb" src=${data.meals[0].strMealThumb} alt="">
-            <p>${data.meals[0].strMeal}</p>
-        </div>`
-        })
-    } 
 }
