@@ -198,7 +198,7 @@ body{
     display: flex;
     flex-wrap: wrap;
     background-color: #000;
-    padding: 30px 0px 0px 40px;
+    padding: 30px 0px 0px 15px;
 }
 .searchResults .recipe{
     background-color: #282626;
@@ -223,7 +223,7 @@ body{
 }
 .searchResults p{
     margin-top: 15px;
-    font-size: 25px;
+    font-size: 20px;
     color: #A67C3F;
     font-weight: bold;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -235,9 +235,9 @@ body{
     *{
         padding: 0px;
         margin: 0px;
+        overflow-x: hidden;
     }
     body{
-        height: 100vh;
         width: 100vw;
         overflow-x: hidden;
         background-color: #000;
@@ -254,20 +254,18 @@ body{
     }
     .sec1 .welcome{
         font-size: 2.5rem;
-        position: relative;top: 25px;
+        top: 25px;
     }
     .sec1 .heading{
         font-size: 1.5rem;
-        position: relative;top: 30px;
+        top: 30px;
     }
     .sec1{
         height: 200px;
     }
     .searchResults{
-        display: flex;
-        flex-wrap: wrap;
-        background-color: #000;
-        padding: 30px 0px 0px 40px;
+        padding: 10px 0px 0px 20px;
+        overflow: scroll;
     }
     .searchResults .recipe{
         height: 150px;
@@ -277,17 +275,43 @@ body{
     }
     .searchResults img{
         border-radius: 15px;
-        height: 120px;
-        width: 120px;
+        height: 100px;
+        width: 100px;
     }
     .searchResults p{
         margin-top: 15px;
-        font-size: 15px;
+        font-size: 12px;
         color: #A67C3F;
         font-weight: bold;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         width: auto;
         text-align: center;
+    }
+    .sec2{
+        width: 100vw;
+        background-color: black;
+        color: white;
+        height: 350px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .sec2 #ftDishImage{
+        border: 3px solid #c0852d;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        height: 180px;
+        width: 180px;
+    }
+    .sec2 #ftDishName{
+        font-weight: 500;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 25px;
+        margin-top: 15px;
+    }
+    .ftbuttons{
+        margin-top: 25px;
     }
 }
 

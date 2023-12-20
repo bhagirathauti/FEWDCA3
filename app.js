@@ -35,7 +35,7 @@ closeModalBtn.addEventListener("click", () => {
 });
 
 document.body.addEventListener("click", (event) => {
-    if (event.target === modal) {
+    if (event.target === Ingredientsmodal) {
         Ingredientsmodal.style.display = "none";
     }
 });
